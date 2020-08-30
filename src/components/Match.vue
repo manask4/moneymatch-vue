@@ -208,6 +208,8 @@ figure img {
 .networth {
   transform: rotate(-25deg) translate(-50px, 0px);
   z-index: 1;
+  border-left: 2px solid #17502b;
+  box-shadow: 0px 2px 4px #17502b;
 }
 .tears-container {
   display: flex;

@@ -30,6 +30,7 @@
       <div class="field">
         <div class="control has-icons-left">
           <input
+            aria-label="Enter annual income"
             v-on:input="inputUserIncome"
             v-model="userIncome"
             min="70000"

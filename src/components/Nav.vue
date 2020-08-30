@@ -11,25 +11,28 @@
     <!-- Right side -->
     <div class="level-right nav-links">
       <p class="level-item">
-        <button class="button is-link" v-on:click="openContendersModal();" id="trigger-contenders-modal">Contenders</button>
-
+        <button
+          class="button is-link"
+          v-on:click="openContendersModal();"
+          id="trigger-contenders-modal"
+        >Contenders</button>
       </p>
       <p class="level-item">
-        <button class="button is-link" v-on:click="openUserIncomeModal();" id="trigger-income-modal">Set Income</button>
+        <button
+          class="button is-link"
+          v-on:click="openUserIncomeModal();"
+          id="trigger-income-modal"
+        >Set Income</button>
       </p>
     </div>
   </nav>
 </template>
 
 <script>
-
 export default {
   name: "Nav",
-  components: {
-  },
-  props: {
-    // timer: Object,
-  },
+  components: {},
+  props: {},
   methods: {
     openContendersModal: function () {
       document.getElementById("contenders-modal").classList.add("is-active");
@@ -37,7 +40,7 @@ export default {
     },
     openUserIncomeModal: function () {
       document.getElementById("user-income-modal").classList.add("is-active");
-      let income = localStorage.getItem('income');
+      let income = localStorage.getItem("income");
       if (income !== null) {
         document.getElementById("user-income").value = income;
       }
@@ -52,22 +55,21 @@ export default {
 .title {
   color: #994ff3;
 }
-
+button {
+  box-shadow: 0px 2px 4px #18428a;
+}
 .banner {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
 }
-
 nav {
   padding: 1em 2em;
 }
-
 .level {
   margin-bottom: 0 !important;
 }
-
 @media screen and (max-width: 769px) {
   .banner {
     align-items: center;

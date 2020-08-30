@@ -38,10 +38,13 @@
             </tr>
           </tbody>
         </table>
-        <span style="display: block" class="subtitle is-size-7 is-italic has-text-right">Data sourced from Forbes</span>
+        <span
+          style="display: block"
+          class="subtitle is-size-7 is-italic has-text-right"
+        >Data sourced from Forbes</span>
       </div>
       <button id="set-contender" v-on:click="closeModal" class="button is-success is-large">
-        <i class="fas fa-lg fa-check"></i>
+        <font-awesome-icon :icon="['fas', 'check']" size="lg" />
       </button>
     </div>
     <button
@@ -54,6 +57,10 @@
 </template>
 
 <script>
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+library.add(faCheck);
+
 export default {
   name: "ContendersModal",
   props: {

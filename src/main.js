@@ -1,12 +1,16 @@
 import Vue from "vue";
 import App from "./App.vue";
 
-import "../node_modules/bulma/css/bulma.css";
-import "@fortawesome/fontawesome-free/css/all.css";
-import "@fortawesome/fontawesome-free/js/all.js";
+// add bulma css
+import "../node_modules/bulma/css/bulma.min.css";
+// add fontawesome
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+Vue.component("font-awesome-icon", FontAwesomeIcon);
+// add custom css
 import "@/assets/main.css";
+
 import store from "./store";
-import './registerServiceWorker'
+import "./registerServiceWorker";
 
 Vue.config.productionTip = false;
 

@@ -10,13 +10,13 @@
       </figure>
       <span class="mt-2 is-primary is-size-1 has-text-weight-bold">
         <span :class="this.$root.currency == 'dollar' ? 'is-hidden' : ''" class="has-text-success">
-          <i class="fas fa-rupee-sign"></i>
+          <font-awesome-icon :icon="['fas', 'rupee-sign']" />
         </span>&nbsp;
         <span
           :class="this.$root.currency == 'rupee' ? 'is-hidden' : ''"
           class="has-text-success"
         >
-          <i class="fas fa-dollar-sign"></i>
+          <font-awesome-icon :icon="['fas', 'dollar-sign']" />
         </span>&nbsp;
         <span class="money" :id="contender.alt + '-money'">{{ p1MoneyCounter }}</span>
       </span>
@@ -30,19 +30,19 @@
         <img class="is-rounded" :src="user.avatar" :alt="user.name" />
         <span class="tears-container is-hidden">
           <span class="icon has-text-info">
-            <i class="fas fa-2x fa-tint"></i>
+            <font-awesome-icon :icon="['fas', 'tint']" size="2x" />
           </span>
         </span>
       </figure>
       <span class="mt-2 is-primary is-size-1 has-text-weight-bold">
         <span :class="this.$root.currency == 'dollar' ? 'is-hidden' : ''" class="has-text-success">
-          <i class="fas fa-rupee-sign"></i>
+          <font-awesome-icon :icon="['fas', 'rupee-sign']" />
         </span>&nbsp;
         <span
           :class="this.$root.currency == 'rupee' ? 'is-hidden' : ''"
           class="has-text-success"
         >
-          <i class="fas fa-dollar-sign"></i>
+          <font-awesome-icon :icon="['fas', 'dollar-sign']" />
         </span>&nbsp;
         <span class="money" :id="user.alt + '-money'">{{ p2MoneyCounter }}</span>
       </span>
@@ -51,6 +51,14 @@
 </template>
 
 <script>
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faTint,
+  faDollarSign,
+  faRupeeSign,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faTint, faDollarSign, faRupeeSign);
+
 export default {
   name: "Match",
   props: {

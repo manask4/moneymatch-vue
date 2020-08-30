@@ -6,15 +6,18 @@
         <h1 class="title is-size-5 mb-3">
           About
           <span class="info-icon">
-            <i class="fas fa-sm fa-info-circle"></i>
+            <font-awesome-icon :icon="['fas', 'info-circle']" size="sm" />
           </span>
         </h1>
         <h2 class="mb-5">
           See how you stack up against some of the billionaires on the planet
           and check how much money you make per second.
           Built purely for fun.
-          <span style="vertical-align:sub" class="icon has-text-warning has-text-weight-bold">
-            <i class="far fa-lg fa-laugh-beam"></i>
+          <span
+            style="vertical-align:text-bottom"
+            class="icon has-text-warning has-text-weight-bold"
+          >
+            <font-awesome-icon :icon="['fas', 'laugh-beam']" size="lg" />
           </span>
         </h2>
         <div class="content">
@@ -45,6 +48,10 @@
   </div>
 </template>
 <script>
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faInfoCircle, faLaughBeam } from "@fortawesome/free-solid-svg-icons";
+library.add(faInfoCircle, faLaughBeam);
+
 export default {
   props: {
     isActive: Boolean,

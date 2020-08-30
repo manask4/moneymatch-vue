@@ -10,7 +10,7 @@
             class="py-5 button"
             aria-label="Set Dollar"
           >
-            <i class="fas fa-2x fa-dollar-sign"></i>
+            <font-awesome-icon :icon="['fas', 'dollar-sign']" size="2x" />
           </button>
           <button
             @click="currency != 'rupee' ? setCurrency('rupee') : ''"
@@ -18,7 +18,7 @@
             class="py-5 button ml-2"
             aria-label="Set Rupee"
           >
-            <i class="fas fa-2x fa-rupee-sign"></i>
+            <font-awesome-icon :icon="['fas', 'rupee-sign']" size="2x" />
           </button>
         </span>
         <label
@@ -41,10 +41,10 @@
             placeholder="Your annual income"
           />
           <span :class="currency == 'dollar' ? '' : 'is-hidden'" class="icon is-small is-left">
-            <i class="fas fa-dollar-sign"></i>
+            <font-awesome-icon :icon="['fas', 'dollar-sign']" />
           </span>
           <span :class="currency == 'rupee' ? '' : 'is-hidden'" class="icon is-small is-left">
-            <i class="fas fa-rupee-sign"></i>
+            <font-awesome-icon :icon="['fas', 'rupee-sign']" />
           </span>
         </div>
       </div>
@@ -55,7 +55,7 @@
         class="button is-success is-large"
         aria-label="Save"
       >
-        <i class="fas fa-lg fa-check"></i>
+        <font-awesome-icon :icon="['fas', 'check']" size="lg" />
       </button>
     </div>
     <button
@@ -68,6 +68,10 @@
 </template>
 
 <script>
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faCheck, faDollarSign, faRupeeSign } from "@fortawesome/free-solid-svg-icons";
+library.add(faCheck, faDollarSign, faRupeeSign);
+
 export default {
   name: "UserIncomeModal",
   data: function () {

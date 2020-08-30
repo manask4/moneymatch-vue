@@ -2,7 +2,7 @@
   <!-- Footer -->
   <div class="footer-container">
     <span @click="toggleInfo" class="info-icon mr-5">
-      <i class="fas fa-2x fa-info-circle"></i>
+      <font-awesome-icon :icon="['fas', 'info-circle']" size="2x" />
     </span>
     <InfoModal @toggle-info="toggleInfo" v-bind:isActive="isActive" />
     <footer class="footer has-text-light has-background-dark mt-4">
@@ -14,11 +14,11 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i aria-hidden="true" class="fab fa-github"></i>
+          <img height="18" width="18" src="../assets/github.png" alt="Github Link" />
         </a>&nbsp;&nbsp;
         <p class="is-size-7 is-italic">
           Just for laughs.
-          <i class="far fa-laugh"></i>
+          <font-awesome-icon :icon="['fas', 'laugh']" />
         </p>
       </div>
     </footer>
@@ -27,6 +27,9 @@
 
 <script>
 import InfoModal from "../components/InfoModal.vue";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faInfoCircle, faLaugh } from "@fortawesome/free-solid-svg-icons";
+library.add(faInfoCircle, faLaugh);
 
 export default {
   name: "Footer",

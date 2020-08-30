@@ -10,8 +10,7 @@
         id="start-timer"
         :class="{ 'is-hidden': this.$root.timerStart }"
       >
-        <!-- <i class="far fa-lg fa-play-circle"></i> -->
-        <i class="fas fa-play"></i>
+        <font-awesome-icon :icon="['fas', 'play']" />
       </span>
       <span
         @click="this.$root.setTimerPaused"
@@ -19,8 +18,7 @@
         class="has-text-weight-light"
         :class="{ 'is-hidden': !this.$root.timerStart }"
       >
-        <!-- <i class="far fa-lg fa-pause-circle"></i> -->
-        <i class="fas fa-pause"></i>
+        <font-awesome-icon :icon="['fas', 'pause']" />
       </span>
       <span
         @click="this.$root.setTimerReset"
@@ -28,14 +26,17 @@
         class="ml-4"
         :class="{ 'is-hidden': this.$root.timerReset }"
       >
-        <!-- <i class="far fa-lg fa-stop-circle"></i> -->
-        <i class="fas fa-undo-alt"></i>
+        <font-awesome-icon :icon="['fas', 'undo-alt']" />
       </span>
     </span>
   </div>
 </template>
 
 <script>
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faPlay, faPause, faUndoAlt } from "@fortawesome/free-solid-svg-icons";
+library.add(faPlay, faPause, faUndoAlt);
+
 export default {
   name: "Timer",
   props: {},

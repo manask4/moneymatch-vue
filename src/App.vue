@@ -1,28 +1,46 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Nav />
+    <Landing />
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Nav from "./components/Nav.vue";
+import Landing from "./components/Landing.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Nav,
+    Landing,
+    Footer,
+  },
+  data: function () {
+    return {};
+  },
+  methods: {},
+  mounted: function () {
+    let income = localStorage.getItem("income");
+    if (income === null) {
+      document.getElementById('trigger-income-modal').click();
+    }
+  },
+};
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: Avenir, Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  /* text-align: center; */
   color: #2c3e50;
-  margin-top: 60px;
+  /* background-color: #fffffe; */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 </style>

@@ -11,13 +11,11 @@
     <!-- Right side -->
     <div class="level-right nav-links">
       <p class="level-item">
-        <!-- <a v-on:click="openContendersModal(); $emit('tp');" id="trigger-contenders-modal">Contenders</a> -->
-        <button class="button is-info" v-on:click="openContendersModal();" id="trigger-contenders-modal">Contenders</button>
+        <button class="button is-link" v-on:click="openContendersModal();" id="trigger-contenders-modal">Contenders</button>
 
       </p>
       <p class="level-item">
-        <!-- <a v-on:click="openUserIncomeModal(); $emit('tp');" id="trigger-income-modal">Set Income</a> -->
-        <button class="button is-info" v-on:click="openUserIncomeModal();" id="trigger-income-modal">Set Income</button>
+        <button class="button is-link" v-on:click="openUserIncomeModal();" id="trigger-income-modal">Set Income</button>
       </p>
     </div>
   </nav>

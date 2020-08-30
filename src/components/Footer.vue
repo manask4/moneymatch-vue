@@ -8,12 +8,13 @@
     <footer class="footer has-text-light has-background-dark mt-4">
       <div class="content has-text-centered">
         <a
+          aria-label="Go to github repository"
           class="has-text-light"
-          href="https://github.com/manask4/moneymatch"
+          href="https://github.com/manask4/moneymatch-vue"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fab fa-github"></i>
+          <i aria-hidden="true" class="fab fa-github"></i>
         </a>&nbsp;&nbsp;
         <p class="is-size-7 is-italic">
           Just for laughs.

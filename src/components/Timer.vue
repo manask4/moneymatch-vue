@@ -54,8 +54,6 @@ export default {
   justify-content: center;
   align-items: center;
   font-size: 2em;
-  /* color: #436060; */
-  /* color: #556f6f; */
 }
 #timer-icons {
   display: flex;

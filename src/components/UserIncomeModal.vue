@@ -8,6 +8,7 @@
             @click="currency != 'dollar' ? setCurrency('dollar') : ''"
             :class="currency == 'dollar' ? 'is-primary' : 'is-dark'"
             class="py-5 button"
+            aria-label="Set Dollar"
           >
             <i class="fas fa-2x fa-dollar-sign"></i>
           </button>
@@ -15,14 +16,16 @@
             @click="currency != 'rupee' ? setCurrency('rupee') : ''"
             :class="currency == 'rupee' ? 'is-primary' : 'is-dark'"
             class="py-5 button ml-2"
+            aria-label="Set Rupee"
           >
             <i class="fas fa-2x fa-rupee-sign"></i>
           </button>
         </span>
-        <p
+        <label
+          for="user-income"
           v-show="Boolean(userIncome)"
           class="modal-header tag is-info is-light is-size-7 mb-2 has-text-left"
-        >Your Annual Income</p>
+        >Your Annual Income</label>
       </div>
       <div class="field">
         <div class="control has-icons-left">
@@ -49,6 +52,7 @@
         id="set-income"
         @click="userIncome !== null ? $emit('update-user-networth', userIncome) && setUserIncome() : ''"
         class="button is-success is-large"
+        aria-label="Save"
       >
         <i class="fas fa-lg fa-check"></i>
       </button>

@@ -6,6 +6,7 @@ import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/js/all.js";
 import "@/assets/main.css";
 import store from "./store";
+import './registerServiceWorker'
 
 Vue.config.productionTip = false;
 

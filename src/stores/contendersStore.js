@@ -1,5 +1,5 @@
 // list of only billionaires please..
-let contenders = [
+const contenders = [
   {
     id: 1,
     name: "Jeff Bezos",
@@ -7,7 +7,7 @@ let contenders = [
     position: "Founder, Amazon",
     networth: 196000000000,
     nwText: '196 billion',
-    avatar: require("./assets/bezos.jpeg"),
+    avatar: require("../assets/bezos.jpeg"),
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ let contenders = [
     position: "Co-founder, Microsoft",
     networth: 114000000000,
     nwText: '114 billion',
-    avatar: require("./assets/gates.jpeg"),
+    avatar: require("../assets/gates.jpeg"),
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ let contenders = [
     position: "CEO, Tesla | SpaceX",
     networth: 98000000000,
     nwText: '98 billion',
-    avatar: require("./assets/musk.jpg"),
+    avatar: require("../assets/musk.jpg"),
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ let contenders = [
     position: "CEO, Reliance",
     networth: 78000000000,
     nwText: '78 billion',
-    avatar: require("./assets/ambani.jpg"),
+    avatar: require("../assets/ambani.jpg"),
   },
 ];
 

@@ -1,6 +1,9 @@
 # moneymatch-vue
+## Moneymatch built with Vuejs
 
-## Project setup
+![moneymatch user interface](./moneymatch.png?raw=true "Moneymatch")
+
+### Project setup
 ```
 npm install
 ```

@@ -1,5 +1,6 @@
 # moneymatch-vue
-## Moneymatch built with Vuejs
+## Moneymatch - Income per second simulator
+### Built with vuejs
 
 ![moneymatch user interface](./moneymatch.png?raw=true "Moneymatch")
 
